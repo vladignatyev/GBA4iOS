@@ -7,10 +7,13 @@ Game Boy Advance emulator for iOS. It's 100% compatible with the most of cool Ga
 
 ### How to install GBA4iOS on iOS 8 ###
 
-To install GBA4iOS you can choose from the multiple options. 
-• First. Go and get paid account at [BuildStore. Install iOS apps without Jailbreak](http://builds.io) It has reliable service, responsive support, one-year guarantee and it works out of the box. No glitches, no problems with failing app after update on upper version of iOS. It costs less than $1 a month for year subscription.
-• Second. Use [iEmulators](http://iemulators.com). It is the most known and powerful community of active gamers of old games and emulators fans. It grows fast, but sometimes you may break your app and make it not working after new Apple iOS updates and well-known Apple Ban. Weird things, but great people and absolutely free.
-• Third. Try another enormous count of another sites! For example [GBA4iOS Permanent Mirror](http://www.gba4ios.info/). It's free to install, but have a bunch of ads and app could crash. Another guide is available here at [GBA4iOS How to install guide](http://gba4ios.me/)
+To install GBA4iOS you can choose from the number of options.
+
+1. Go and get paid account at [BuildStore. Install iOS apps without Jailbreak](http://builds.io) It has reliable service, responsive support, one-year guarantee and it works out of the box. No glitches, no problems with failing app after update on upper version of iOS. It costs less than $1 a month for year subscription.
+
+2. Use [iEmulators](http://iemulators.com). It is the most known and powerful community of active gamers of old games and emulators fans. It grows fast, but sometimes you may break your app and make it not working after new Apple iOS updates and well-known Apple Ban. Weird things, but great people and absolutely free.
+
+3. Try another enormous count of another sites! For example [GBA4iOS Permanent Mirror](http://www.gba4ios.info/). It's free to install, but have a bunch of ads and app could crash. Another guide is available here at [GBA4iOS How to install guide](http://gba4ios.me/)
 
 ### BuildStore (builds.io) usage ###
 
