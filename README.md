@@ -3,9 +3,28 @@ GBA4iOS
 
 ![GBA4iOS](http://gba4iosapp.com/images/download/gba4ios2_devices.png)
 
-The number one Game Boy Advance emulator for iOS is back, and has been rewritten from the ground up for iOS 7.
+Game Boy Advance emulator for iOS. It's 100% compatible with the most of cool GameBoy Advance Games ever created.
 
-### New Features ###
+### How to install GBA4iOS on iOS 8 ###
+
+To install GBA4iOS you can choose from the multiple options. 
+• First. Go and get paid account at [BuildStore. Install iOS apps without Jailbreak](http://builds.io) It has reliable service, responsive support, one-year guarantee and it works out of the box. No glitches, no problems with failing app after update on upper version of iOS. It costs less than $1 a month for year subscription.
+• Second. Use [iEmulators](http://iemulators.com). It is the most known and powerful community of active gamers of old games and emulators fans. It grows fast, but sometimes you may break your app and make it not working after new Apple iOS updates and well-known Apple Ban. Weird things, but great people and absolutely free.
+• Third. Try another enormous count of another sites! For example [GBA4iOS Permanent Mirror](http://www.gba4ios.info/). It's free to install, but have a bunch of ads and app could crash. Another guide is available here at [GBA4iOS How to install guide](http://gba4ios.me/)
+
+### BuildStore (builds.io) usage ###
+
+[The BuildStore](http://builds.io) distributes iOS apps removed from the AppStore. It allows you to install applications using Apple's OTA technology and some distributed reliable fault-tolerant infrastructure behind. That's why it guarantees one-year lifetime for your apps. Of course, you can continue subscription for the next year. 
+
+The sign up proccess is very straight-forward, but you'd be sure that you're opening the site in *Safari* on your iPad or iPhone and you don't use [Private Browsing Mode](http://builds.io/pages/private-browsing/).
+
+It is easy to use as one and two.
+
+### Builds.io requirements ###
+
+Working Apple gadget charged with iOS at least version 6. No beta-versions supported. Set up and go play!
+
+### Latest features updates ###
 
 • Completely new emulator core based on VBA-M  
 • iPad Support  
@@ -27,7 +46,7 @@ The number one Game Boy Advance emulator for iOS is back, and has been rewritten
 • iTunes File Sharing Support  
 • Fast Forward  
 
-Getting Started
+Getting Started for developers
 =============
 
 GBA4iOS can be opened in Xcode and deployed to an iOS device just like an other app, but there are a few steps that need to be completed first:
@@ -40,7 +59,7 @@ GBA4iOS can be opened in Xcode and deployed to an iOS device just like an other 
 Requirements
 =============
 
-• GBA4iOS 2.0 requires Xcode 5 or later, targeting iOS 7.0 and above.  
+• GBA4iOS 2 requires Xcode 5 or later, targeting iOS 7.0 and above.  
 • For deployment to iOS 6 devices, use the project in the 1.x branch.
 
 Contact
@@ -48,4 +67,5 @@ Contact
 
 GBA4iOS was created by developer [Riley Testut](http://twitter.com/rileytestut) and graphic designer [Paul Thorsen](http://twitter.com/pau1thor).
 
-Questions about GBA4iOS? Check http://gba4iosapp.com/faq/ or email support@gba4iosapp.com.
+Questions about GBA4iOS installation? 
+E-mail hello@builds.io
