@@ -22,7 +22,7 @@
 #import "GBABluetoothLinkManager.h"
 #import "UIDevice-Hardware.h"
 
-#import <Dropbox-iOS-SDK/DropboxSDK.h>
+#import <DropboxSDK/DropboxSDK.h>
 
 #define FRAME_SKIP_SECTION 0
 #define LINKING_SECTION 1
