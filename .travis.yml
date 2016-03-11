@@ -1,6 +1,5 @@
 language: objective-c
 osx_image: xcode7.3
-xcode_project: GBA4iOS.xcodeproj
 xcode_workspace: GBA4iOS.xcworkspace
 xcode_scheme: GBA4iOS
 git:
