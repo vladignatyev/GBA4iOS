@@ -7,4 +7,4 @@ git:
   depth: 3
 branches:
   only:
-    - master
+    - travis
