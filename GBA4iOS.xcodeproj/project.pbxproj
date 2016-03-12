@@ -2131,21 +2131,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1EA55267B56920DB4493217C /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		657CB59918BF14DD00217F96 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2989,6 +2974,7 @@
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NETFOKS OOO";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -3187,6 +3173,7 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -3494,6 +3481,7 @@
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -3537,6 +3525,7 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -3685,6 +3674,7 @@
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
