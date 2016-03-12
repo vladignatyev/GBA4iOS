@@ -200,7 +200,7 @@ static GBAEmulationViewController *_emulationViewController;
         // Add to our view so we can animate it
         [self.view addSubview:self.splashScreenView];
         
-        self.romTableViewController = [[GBAROMTableViewController alloc] init];
+        self.romTableViewController = [[GBAROMTableViewController alloc] initWithNibName:nil bundle:nil];
         self.romTableViewController.appearanceDelegate = self;
         self.romTableViewController.view.layer.allowsGroupOpacity = YES;
         
@@ -543,7 +543,7 @@ static GBAEmulationViewController *_emulationViewController;
     }
     
     GCController *controller = notification.object;
-    [controller setPlayerIndex:0];
+    [controller setPlayerIndex:GCControllerPlayerIndex1];
     
     self.externalController = [GBAExternalController externalControllerWithController:controller];
     self.externalController.delegate = self;
