@@ -1,3 +1,15 @@
+Disclaimer about this repo
+==========================
+
+This repo is not affiliated with official Riley's repository located on BitBucket here: https://bitbucket.org/rileytestut/gba4ios/
+
+The purpose of this repository is to make cutting-edge (not stable, though) version with all modern features included and make it easy for people to check and to test every experiment around GBA4iOS.
+
+Riley Testut and contributors in his repo do well making GBA4iOS better. I created this repo to try give them super-powers with modern tools and providing more responsive feedback on what they do. Additionally I promote great community [iEmulators](http://iemulators.com) and [BuildStore](http://builds.io), the service I create and maintain together with great team for people who wants to dive into retro-gaming with no efforts and to make retro games recognizeable and popular.
+
+Want to participate and help with testing and hacking? [E-mail me](ya.na.pochte@gmail.com) or [mention me in Twitter](https://twitter.com/v_ignatyev)
+
+
 GBA4iOS
 ===========
 
@@ -64,15 +76,6 @@ Requirements
 
 • GBA4iOS 2 requires Xcode 5 or later, targeting iOS 7.0 and above.  
 • For deployment to iOS 6 devices, use the project in the 1.x branch.
-
-Disclaimer about this repo
-==========================
-
-This repo is not affiliated with official Riley's repository located on BitBucket here: https://bitbucket.org/rileytestut/gba4ios/
-
-The purpose of this repository is to make cutting-edge (not stable, though) version with all modern features included and make it easy for people to check and to test every experiment around GBA4iOS.
-
-Riley Testut and contributors in his repo do well making GBA4iOS better. I created this repo to try give them super-powers with modern tools and providing more responsive feedback on what they do. Additionally I promote great community [iEmulators](http://iemulators.com) and [BuildStore](http://builds.io), the service I create and maintain together with great team for people who wants to dive into retro-gaming with no efforts and to make retro games recognizeable and popular.
 
 
 Contact
