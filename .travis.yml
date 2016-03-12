@@ -2,9 +2,6 @@ language: objective-c
 osx_image: xcode7.3
 git:
   depth: 1
-branches:
-  only:
-  - travis
 env:
   global:
   - APP_NAME="GBA4iOS"
