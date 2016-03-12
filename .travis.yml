@@ -1,9 +1,39 @@
 language: objective-c
 osx_image: xcode7.3
-xcode_workspace: GBA4iOS.xcworkspace
-xcode_scheme: GBA4iOS
 git:
-  depth: 3
+  depth: 1
 branches:
   only:
-    - travis
+  - travis
+env:
+  global:
+  - APP_NAME="GBA4iOS"
+  - 'DEVELOPER_NAME="iPhone Distribution: NETFOKS OOO"'
+  - PROFILE_NAME="GBA4iOS_Distribution"
+  - secure: hQNsUQI6YHoPSV7DkwAgBWyO1mxWNHhrnAnEzxm82nL+4ExSBZkWedNJa0o1XVNSemLPlhjHm1UscCbbA1xImUmZBhdz5Fpnb634tfawPNPRTbSwtoQjljt2GlXlkDZdyG5WetzUxALqcsCzwtFr3lujM+7GrYKduGMmkzVfaH0=
+  - secure: FATuMvrQ6OtnljHsjeOT3923a+IckVmI+WCkzTXxHAcgsnYiMa+bP10/HrzKk0WeEPeGL1/r5Nktckp7QsdV7InDM/3sqyPGRFcukxw9cAbvRefBBJO+ZAFB2PUSi1bG0atbuI5M1lfOUUTivv5JOcG2VCR+OJg175dylltV3rA=
+before_script:
+- ./scripts/add-key.sh
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/GBA4iOS_Distribution.mobileprovision.enc
+  -d -a -out scripts/profile/GBA4iOS_Distribution.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a
+  -out scripts/certs/dist.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a
+  -out scripts/certs/dist.p12
+- ./scripts/update-bundle.sh
+script:
+- xctool -workspace GBA4iOS.xcworkspace -scheme GBA4iOS -sdk iphoneos -configuration
+  Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
+after_success:
+- ./scripts/sign-and-upload.sh
+after_script:
+- ./scripts/remove-key.sh
+deploy:
+  provider: s3
+  access_key_id: AKIAJ2CTIIL76MRBWUZA
+  secret_access_key:
+    secure: VX3XryDFJaVGlCMzSggil+B8V7aU7S0xVR3EJbAKvHgx9O/ia04JwnRiZqUWQO4OOUNy61tclhe0+n5DjS/Dm3ZONgbyBFrMLnqQsFTYnHUlztIb4w/RViiI6Qo8YrQxF8OI6NCMWJbE7SKIIXnJbSyiVgJz0GjYFuk3Cj8wH/E=
+  bucket: xemucrew
+  acl: public_read
+  on:
+    repo: vladignatyev/GBA4iOS
