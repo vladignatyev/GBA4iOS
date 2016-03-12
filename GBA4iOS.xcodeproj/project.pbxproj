@@ -1984,6 +1984,7 @@
 				BF2F35B4183FF6F9002ACE90 /* Frameworks */,
 				BF2F35C5183FF6F9002ACE90 /* Resources */,
 				BF2F35CF183FF6F9002ACE90 /* Copy Pods Resources */,
+				B223BA20E1E674C67AE26FDF /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2006,6 +2007,7 @@
 				657CB59918BF14DD00217F96 /* ShellScript */,
 				BF7C0E74189DA4CB00794093 /* ShellScript */,
 				BFB39ADD1958D796003330AE /* Embed App Extensions */,
+				726F1D439835D5CB54739E2F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2035,7 +2037,7 @@
 						};
 					};
 					CC2D56FB1798F2EC00C616EB = {
-						DevelopmentTeam = 6XVY5G3U44;
+						DevelopmentTeam = VFGQS7TV96;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -2142,6 +2144,21 @@
 			shellPath = /bin/sh;
 			shellScript = "APPBUNDLEPATH=\"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}.app/\"\nCRASHLYTICSKEYPATH=\"./Crashlytics.apikey\"\nif [ -f \"${CRASHLYTICSKEYPATH}\" ]; then\n    echo \"Copying Crashlytics api key file into app bundle.\"\n    cp \"${CRASHLYTICSKEYPATH}\" \"${APPBUNDLEPATH}\"\nfi";
 		};
+		726F1D439835D5CB54739E2F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		939E031126014661A3BB86B3 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2155,6 +2172,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B223BA20E1E674C67AE26FDF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF2F34DC183FF6F9002ACE90 /* Check Pods Manifest.lock */ = {
@@ -2940,8 +2972,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ChinaVDI(Beijing)Technology Co.,Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ChinaVDI(Beijing)Technology Co.,Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NETFOKS OOO";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2968,6 +3000,7 @@
 					"-all_load",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.GBA4iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -3138,6 +3171,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -3159,6 +3193,7 @@
 					"-all_load",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.GBA4iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3470,6 +3505,7 @@
 					"-all_load",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.GBA4iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -3485,6 +3521,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -3506,6 +3543,7 @@
 					"-all_load",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.GBA4iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3658,6 +3696,7 @@
 					"-all_load",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.GBA4iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
