@@ -26,3 +26,6 @@ if [ $? -ne 0 ]; then
     echo "Unable to copy provision profile"
     exit 20
 fi
+
+security list-keychains
+security find-identity -p codesigning ~/Library/Keychains/ios-build.keychain
