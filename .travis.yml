@@ -13,14 +13,13 @@ env:
   - secure: hQNsUQI6YHoPSV7DkwAgBWyO1mxWNHhrnAnEzxm82nL+4ExSBZkWedNJa0o1XVNSemLPlhjHm1UscCbbA1xImUmZBhdz5Fpnb634tfawPNPRTbSwtoQjljt2GlXlkDZdyG5WetzUxALqcsCzwtFr3lujM+7GrYKduGMmkzVfaH0=
   - secure: FATuMvrQ6OtnljHsjeOT3923a+IckVmI+WCkzTXxHAcgsnYiMa+bP10/HrzKk0WeEPeGL1/r5Nktckp7QsdV7InDM/3sqyPGRFcukxw9cAbvRefBBJO+ZAFB2PUSi1bG0atbuI5M1lfOUUTivv5JOcG2VCR+OJg175dylltV3rA=
 before_script:
-- ./scripts/add-key.sh
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/GBA4iOS_Distribution.mobileprovision.enc
   -d -a -out scripts/profile/GBA4iOS_Distribution.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a
   -out scripts/certs/dist.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a
   -out scripts/certs/dist.p12
-- ./scripts/update-bundle.sh
+- ./scripts/add-key.sh
 script:
 - xctool -workspace GBA4iOS.xcworkspace -scheme GBA4iOS -sdk iphoneos -configuration
   Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
