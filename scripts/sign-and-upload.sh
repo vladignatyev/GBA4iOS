@@ -17,6 +17,6 @@ read -r -d '' RELEASE_NOTES <<- EOM
   Commit: $TRAVIS_COMMIT\r\n
 EOM
 
-echo $RELEASE_NOTES > $OUTPUTDIR/ipa/notes.txt
+echo $RELEASE_NOTES > "$OUTPUTDIR/ipa/notes - $TRAVIS_BUILD_NUMBER.txt"
 
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/ipa/$APP_NAME - $TRAVIS_BUILD_NUMBER.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
