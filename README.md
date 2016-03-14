@@ -1,5 +1,6 @@
 Disclaimer about this repo
 ==========================
+[![Build Status](https://travis-ci.org/vladignatyev/GBA4iOS.svg?branch=master)](https://travis-ci.org/vladignatyev/GBA4iOS)
 
 This repo is not affiliated with official Riley's repository located on BitBucket here: https://bitbucket.org/rileytestut/gba4ios/
 
