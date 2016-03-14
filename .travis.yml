@@ -30,8 +30,8 @@ deploy:
     secure: VX3XryDFJaVGlCMzSggil+B8V7aU7S0xVR3EJbAKvHgx9O/ia04JwnRiZqUWQO4OOUNy61tclhe0+n5DjS/Dm3ZONgbyBFrMLnqQsFTYnHUlztIb4w/RViiI6Qo8YrQxF8OI6NCMWJbE7SKIIXnJbSyiVgJz0GjYFuk3Cj8wH/E=
   bucket: xemucrew
   acl: public_read
-  all_branches: true
   on:
+    all_branches: true
     repo: vladignatyev/GBA4iOS
   local_dir: /Users/travis/build/vladignatyev/GBA4iOS/build/Enterprise-iphoneos/ipa
   upload-dir: GBA4iOS
