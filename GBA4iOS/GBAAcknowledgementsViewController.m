@@ -10,7 +10,7 @@
 
 @interface GBAAcknowledgementsViewController ()
 
-@property (strong, nonatomic) UITextView *textView;
+@property (strong, nonatomic) UIWebView *textView;
 
 @end
 
@@ -18,7 +18,7 @@
 
 - (instancetype)init
 {
-    self = [super init];
+    self = [super initWithNibName:@"Settings" bundle:nil];
     if (self)
     {
         self.title = NSLocalizedString(@"Acknowledgements", @"");
@@ -29,8 +29,7 @@
 
 - (void)loadView
 {
-    UITextView *textView = [UITextView new];
-    textView.selectable = NO;
+    UIWebView *textView = [UIWebView new];
     
     self.view = textView;
     self.textView = textView;
@@ -40,22 +39,9 @@
 {
     [super viewDidLoad];
     
-    NSURL *acknowledgementsURL = [[NSBundle mainBundle] URLForResource:@"Acknowledgements" withExtension:@"html"];
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithFileURL:acknowledgementsURL options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType}  documentAttributes:nil error:nil];
-    
-    [attributedString enumerateAttribute:NSFontAttributeName inRange:NSMakeRange(0, attributedString.length) options:0 usingBlock:^(UIFont *font, NSRange range, BOOL *stop) {
-        
-        UIFontDescriptorSymbolicTraits symbolicTraits = font.fontDescriptor.symbolicTraits;
-        
-        UIFontDescriptor *fontDescriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleSubheadline];
-        fontDescriptor = [fontDescriptor fontDescriptorWithSymbolicTraits:symbolicTraits];
-        UIFont *newFont = [UIFont fontWithDescriptor:fontDescriptor size:0.0];
-        
-        [attributedString addAttribute:NSFontAttributeName value:newFont range:range];
-        
-    }];
-    
-    self.textView.attributedText = attributedString;
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"Acknowledgements" ofType:@"html"];
+    NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    [self.textView loadHTMLString:htmlString baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning
