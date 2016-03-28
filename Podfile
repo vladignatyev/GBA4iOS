@@ -11,3 +11,4 @@ pod "AFNetworking", "~> 2.4"
 pod "PSPDFTextView", :git => 'https://github.com/steipete/PSPDFTextView.git'
 pod "Dropbox-iOS-SDK", "~> 1.3.0"
 pod "CrashlyticsFramework", "~> 2.1.0"
+pod 'Google/Analytics', '~> 1.0.0'

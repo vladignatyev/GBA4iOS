@@ -10,6 +10,8 @@
 #import "GBASettingsViewController.h"
 #import "GBAWebBrowserHomepageViewController.h"
 
+#import "GBAAnalyticsTracker.h"
+
 @interface GBAWebViewController ()
 {
     BOOL _reloadWhenVisible;
@@ -46,6 +48,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [GBAAnalyticsTracker trackScreenWithName:@"ROM downloads web-view"];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
     {

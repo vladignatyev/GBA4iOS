@@ -24,6 +24,8 @@
 
 #import <DropboxSDK/DropboxSDK.h>
 
+#import "GBAAnalyticsTracker.h"
+
 #define FRAME_SKIP_SECTION 0
 #define LINKING_SECTION 1
 #define AUDIO_SECTION 2
@@ -108,6 +110,8 @@ NSString *const GBASettingsDropboxStatusChangedNotification = @"GBASettingsDropb
     // Must call this manually before calling super to ensure the row is always deselected
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:animated];
     [super viewWillAppear:animated];
+    
+    [GBAAnalyticsTracker trackScreenWithName:@"Settings View"];
 }
 
 - (void)dealloc
