@@ -12,6 +12,8 @@
 		1AD971E717D2B6EC007097BC /* GBAControllerSkinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD971E617D2B6EC007097BC /* GBAControllerSkinDetailViewController.m */; };
 		1AD971F317D2C6ED007097BC /* GBAControllerSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD971F117D2C6ED007097BC /* GBAControllerSkin.m */; };
 		36BB379009474825B993FD0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AFB44A5AB34C2982DE856F /* libPods.a */; };
+		80E8A8F81CA9568F00DEA965 /* GBAAnalyticsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E8A8F71CA9568F00DEA965 /* GBAAnalyticsTracker.m */; };
+		80E8A8FA1CA95DA100DEA965 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80E8A8F91CA95DA100DEA965 /* GoogleService-Info.plist */; };
 		BF02AFDB182F3E590031B8B6 /* GBASyncingOverviewViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF02AFDA182F3E590031B8B6 /* GBASyncingOverviewViewController.mm */; };
 		BF02AFDF182F6E200031B8B6 /* GBASyncingDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF02AFDE182F6E200031B8B6 /* GBASyncingDetailViewController.mm */; };
 		BF02D2C4197344950034A515 /* GBASoftwareUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF02D2C3197344950034A515 /* GBASoftwareUpdate.m */; };
@@ -488,6 +490,9 @@
 		1AD971F117D2C6ED007097BC /* GBAControllerSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAControllerSkin.m; sourceTree = "<group>"; };
 		4A0F09D4E8E87AAE2BF774E2 /* Pods.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods.ad hoc.xcconfig"; path = "Pods/Target Support Files/Pods/Pods.ad hoc.xcconfig"; sourceTree = "<group>"; };
 		4BC912A8C9F0C9806CCC83B8 /* Pods.jailbreak.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.jailbreak.xcconfig; path = "Pods/Target Support Files/Pods/Pods.jailbreak.xcconfig"; sourceTree = "<group>"; };
+		80E8A8F61CA9568F00DEA965 /* GBAAnalyticsTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBAAnalyticsTracker.h; sourceTree = "<group>"; };
+		80E8A8F71CA9568F00DEA965 /* GBAAnalyticsTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAAnalyticsTracker.m; sourceTree = "<group>"; };
+		80E8A8F91CA95DA100DEA965 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8782243FD47ECE841FACE25A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		96AAF68A93CA1A6118EB130D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A1C556FA45115F5391A4909E /* Pods.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.enterprise.xcconfig; path = "Pods/Target Support Files/Pods/Pods.enterprise.xcconfig"; sourceTree = "<group>"; };
@@ -1008,6 +1013,16 @@
 				BF104A8217EB7B8F003C86F5 /* Cells */,
 			);
 			name = "Controller Skins";
+			sourceTree = "<group>";
+		};
+		80E8A8FB1CA95DAB00DEA965 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				80E8A8F91CA95DA100DEA965 /* GoogleService-Info.plist */,
+				80E8A8F61CA9568F00DEA965 /* GBAAnalyticsTracker.h */,
+				80E8A8F71CA9568F00DEA965 /* GBAAnalyticsTracker.m */,
+			);
+			name = Analytics;
 			sourceTree = "<group>";
 		};
 		BF02AFD8182F3E3A0031B8B6 /* Syncing */ = {
@@ -1568,6 +1583,7 @@
 				CC2D570F1798F2EC00C616EB /* GBAAppDelegate.mm */,
 				CC2D573F1798F44700C616EB /* GBAROMTableViewController.h */,
 				CC2D57401798F44700C616EB /* GBAROMTableViewController.mm */,
+				80E8A8FB1CA95DAB00DEA965 /* Analytics */,
 				BF8C11461A2D01DF00126A3D /* GBANoGamesView.xib */,
 				BF73C2ED1822EA2F00DD69FD /* Dropbox Sync */,
 				CC7AC2EB17C694E800FB7642 /* Emulation */,
@@ -2119,6 +2135,7 @@
 				BF8C11431A2D01DF00126A3D /* GBANoGamesView.xib in Resources */,
 				1A5BAE7F17D04B0A00BABC01 /* overlays128.png in Resources */,
 				CC5044E71814C474009F7B9E /* Default.gbcskin in Resources */,
+				80E8A8FA1CA95DA100DEA965 /* GoogleService-Info.plist in Resources */,
 				BFBA77BA19B715E1000E8425 /* Acknowledgements.html in Resources */,
 				BFB89E4718909EE8002E5F26 /* Default@2x.png in Resources */,
 				BF3B2B771A2E3F3500301AE1 /* GBA4iOS-InfoPlist.strings in Resources */,
@@ -2566,6 +2583,7 @@
 				CC5045001814DC69009F7B9E /* Patch.cpp in Sources */,
 				CCC9B8AC1815AC7E005C90EE /* cpu.cpp in Sources */,
 				CC5044EE1814DC69009F7B9E /* Cheats.cpp in Sources */,
+				80E8A8F81CA9568F00DEA965 /* GBAAnalyticsTracker.m in Sources */,
 				CCFA7189179D2EAB00768D24 /* NavView.cc in Sources */,
 				CCC9B8981815AC7E005C90EE /* sprite_mapper.cpp in Sources */,
 				CC50450E1814DC69009F7B9E /* Gzip_Reader.cpp in Sources */,
