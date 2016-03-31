@@ -22,6 +22,8 @@
 #import <DropboxSDK/DropboxSDK.h>
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 
+#import "GBAAnalyticsTracker.h"
+
 #import "UIView+DTDebug.h"
 #import "NSDate+Comparing.h"
 #import "UIAlertView+RSTAdditions.h"
@@ -63,6 +65,8 @@ static GBAAppDelegate *_appDelegate;
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.tintColor = GBA4iOS_PURPLE_COLOR;
+    
+    [GBAAnalyticsTracker configureTracker];
     
     [[UISwitch appearance] setOnTintColor:GBA4iOS_PURPLE_COLOR]; // Apparently UISwitches don't inherit tint color from superview
     

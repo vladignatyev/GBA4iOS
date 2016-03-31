@@ -22,6 +22,7 @@
 #import "GBAWebViewController.h"
 
 #import <Crashlytics/Crashlytics.h>
+#import "GBAAnalyticsTracker.h"
 
 #import "UIAlertView+RSTAdditions.h"
 #import "UIActionSheet+RSTAdditions.h"
@@ -143,6 +144,8 @@ dispatch_queue_t directoryContentsChangedQueue() {
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [GBAAnalyticsTracker trackScreenWithName:@"ROM Table View"];
     
     [[UIApplication sharedApplication] setStatusBarStyle:[self preferredStatusBarStyle] animated:YES];
         
@@ -289,6 +292,10 @@ dispatch_queue_t directoryContentsChangedQueue() {
 - (BOOL)webViewController:(RSTWebViewController *)webViewController shouldInterceptDownloadRequest:(NSURLRequest *)request
 {
     NSString *fileExtension = request.URL.pathExtension.lowercaseString;
+    
+    [GBAAnalyticsTracker trackEventWithCategory:@"ROMs Downloading"
+                                         action:@"Download ROM"
+                                          label:[NSString stringWithContentsOfURL:request.URL usedEncoding:nil error:nil]];
 
     if ((([fileExtension isEqualToString:@"gb"] || [fileExtension isEqualToString:@"gbc"] || [fileExtension isEqualToString:@"gba"] || [fileExtension isEqualToString:@"zip"]) ||
          ([request.URL.host.lowercaseString rangeOfString:@"m.coolrom"].location == NSNotFound && [request.URL.host.lowercaseString rangeOfString:@".coolrom"].location != NSNotFound)) &&
@@ -1066,6 +1073,10 @@ dispatch_queue_t directoryContentsChangedQueue() {
 
 - (void)startROM:(GBAROM *)rom
 {
+    [GBAAnalyticsTracker trackEventWithCategory:@"ROMs"
+                                         action:@"Start ROM"
+                                          label:rom.name
+                                          value:@1];
     [self startROM:rom showSameROMAlertIfNeeded:YES];
 }
 
